@@ -36,6 +36,7 @@ public class Calc_Client_v2 {
         BufferedReader inFromClient = null;
         BufferedReader inFromServer = null;
 
+        System.out.println("현재 실행 위치 (Working Directory)는  : " + System.getProperty("user.dir"));
         try{
             clientSocket = new Socket(serverIP, nPort);
             System.out.println("Server Connected : (Target : " + serverIP + " : " + nPort + ")");
@@ -72,7 +73,7 @@ public class Calc_Client_v2 {
                 // Protocol Parsing...
                 String[] parts = sentenceFromServer.split("\\|");
                 if(parts.length > 0 && parts[0].equals("OK")){
-                    if(parts.length > 2){
+                    if(parts.length >= 2){
                         System.out.println("Answer : " + parts[1]);
                     }
                 } else if (parts.length > 0 && parts[0].equals("ERR")) {

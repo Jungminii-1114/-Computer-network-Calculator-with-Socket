@@ -36,7 +36,7 @@ class ClientHandler_Final implements Runnable {
                     StringTokenizer st = new StringTokenizer(clientSentence);
 
                     if(st.countTokens() != 3){
-                        throw new IllegalArgumentException("Invalid client sentence");
+                        throw new IllegalArgumentException("INVALID_ARGS");
                     }
 
                     int a = Integer.parseInt(st.nextToken());
