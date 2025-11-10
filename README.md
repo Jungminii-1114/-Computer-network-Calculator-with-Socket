@@ -1,1 +1,1 @@
-🚨Refer Github Wiki for detailed description
+🚨Refer Github repository's Wiki for detailed description
